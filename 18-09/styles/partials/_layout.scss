@@ -1,13 +1,17 @@
-@import '_variables.scss';
+@import '_variables';
+@import'_mixins';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $primaryFont;
 }
 
 body {
     background: $backgroundColor;
+    @include flexStructure;
+    align-items: center;
 }
 
 

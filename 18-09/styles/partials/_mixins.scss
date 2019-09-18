@@ -1,13 +1,47 @@
-@import '_base';
 @import '_variables';
 
-@mixin sectionStructure {
+@mixin flexStructure {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
 
-@mixin h1 {
-    font-size: $h1fontSize;
+@mixin header($fontSize){
+    font-size: $fontSize;
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+}
+
+@mixin button {
+    padding: 12px 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 10px 0 0;
+}
+
+
+@mixin sectionStyling($background, $fontColor, $buttonColor) {
+    background-color: $background;
+    padding: 20px;
+    p, h3 {
+        color: $fontColor;
+        margin: $fontMargin;
+    }
+
+    h3 {
+        font-size: $h3Size;
+    }
+
+    span {
+        text-decoration: underline;
+    }
+
+    button {
+        background-color: $buttonColor;
+        color: $background;
+        @include button;
+    }
 }
 
