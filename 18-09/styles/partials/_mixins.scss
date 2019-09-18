@@ -1,0 +1,13 @@
+@import '_base';
+@import '_variables';
+
+@mixin sectionStructure {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+@mixin h1 {
+    font-size: $h1fontSize;
+}
+
